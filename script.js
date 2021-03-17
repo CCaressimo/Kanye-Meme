@@ -1,7 +1,3 @@
-$(document).ready(() =>{
-    console.log('jQuery is ready');
-})
-
 const $container = $('<div>')
 
 const $title = $('<h1>', {
