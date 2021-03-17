@@ -1,59 +1,9 @@
-const $container = $('<div>')
+var button = document.querySelector(".submit");
 
-const $title = $('<h1>', {
-    text: "God's Response"
-})
-
-$container.append($title)
-$(document.body).append($container)
-
-const $kanyeAdvice = $('<button>', {
-    text: 'Kayne will help you'
-})
-
-$kanyeAdvice.appendTo($container)
-
-$kanyeAdvice.on('click', event =>{
-    getAdvice()
-    .then(Advice => {
-        $('.Advice').remove()
-        console.log(advice);
-        $('<p>', {
-            text: Advice
-        })
-        .addClass('Advice')
-        .hide()
-        .appendTo($container)
-    })
-})
-
-function getAdvice() {
-    return $.ajax({
-        url: 'https://api.kanye.rest',
-        headers: {
-            'Accept' : 'application/json'
-        }
-    })
-    .then(response => {
-        return response.Advice
-    })
-    .catch(err => {
-        return err
-    })
-}
-
-function searchAdvice(term) {
-  return $.ajax({
-    url: "https://api.kanye.rest" + term,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      return response.results.map((result) => result.Advice);
-      // console.log(response);
-    })
-    .catch((err) => {
-      return err;
+button.addEventListener("click", (name) => {
+  fetch("https://api.kanye.rest")
+    .then((Response) => Response.json())
+    .then((data) => {
+      console.log(data);
     });
-}
+});
