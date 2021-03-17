@@ -8,7 +8,7 @@ $container.append($title)
 $(document.body).append($container)
 
 const $kanyeAdvice = $('<button>', {
-    text: 'Click for Kanye'
+    text: 'Kayne will help you'
 })
 
 $kanyeAdvice.appendTo($container)
