@@ -1,3 +1,5 @@
+
+
 var button = document.getElementById('wisdom');
 
 button.addEventListener("click", (name) => {
@@ -10,6 +12,7 @@ button.addEventListener("click", (name) => {
       .then(function (data) {
         document.getElementById("quote").innerHTML = data.quote;
 
+        return fetch(``);
       });
   }
 

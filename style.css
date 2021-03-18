@@ -1,7 +1,48 @@
-h1 {
-    
+@font-face {
+    src: url(fonts/CloisterBlack.ttf);
+    font-family: Cloister;
 }
 
-p {
+@font-face {
+    src: url(fonts/combustion-brk.combustion-ii-brk.ttf);
+    font-family: Combustion;
+}
 
+.wisdom {
+    margin: auto;
+    margin-top: 25%;
+    height: 400px;
+    width: 400px;
+    opacity: 85%;
+    background-color: rgba(116, 100, 77, 0.739);
+    text-align: center;
+    border-radius: 5px;
+}
+
+button {
+    font-size: 20px;
+    font-family: Cloister;
+}
+
+h1 {
+    font-size: 50px;
+    font-style: italic;
+    font-family: Cloister;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+p#quote {
+    font-size: 34px;
+    color: rgb(24, 0, 0);
+    font-family: Combustion;
+    text-decoration: underline overline dotted rgba(42, 42, 42, 0.144);
+}
+
+p#kanye {
+    font-size: 30px;
+    color: rgba(59, 59, 59, 0.835);
+    font-style: italic;
+    font-family: Combustion;
+    text-decoration: underline overline;
 }
