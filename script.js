@@ -1,9 +1,16 @@
-var button = document.querySelector(".submit");
+var button = document.getElementById('wisdom');
 
 button.addEventListener("click", (name) => {
-  fetch("https://api.kanye.rest")
-    .then((Response) => Response.json())
-    .then((data) => {
-      console.log(data);
-    });
+
+  getQuote();
+
+  function getQuote() {
+    fetch("https://api.kanye.rest")
+      .then((resp) => resp.json())
+      .then(function (data) {
+        document.getElementById("quote").innerHTML = data.quote;
+
+      });
+  }
+
 });
