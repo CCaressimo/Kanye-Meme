@@ -22,7 +22,24 @@
 button {
     font-size: 20px;
     font-family: Cloister;
+    background-color: coral;
+    transition: .5s;
+    border-radius: 5px;
 }
+
+button:hover {
+    transition: .5s;
+    transform: translateY(-4px);
+    background-color: crimson;
+}
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transition: .2s;
+}
+
+button:
 
 h1 {
     font-size: 50px;
