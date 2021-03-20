@@ -8,6 +8,12 @@
     font-family: Combustion;
 }
 
+img#kanyeImg {
+    margin: auto;
+    position: fixed;
+    height: 800px;
+    width: 800px;
+}
 .wisdom {
     margin: auto;
     margin-top: 20%;
@@ -30,13 +36,15 @@ button {
     font-size: 20px;
     font-family: Cloister;
     background-color: coral;
-    transition: .5s;
+    box-shadow: 0 4px #666;
+    transition: .3s;
     border-radius: 5px;
 }
 
 button:hover {
-    transition: .5s;
+    transition: .3s;
     transform: translateY(-4px);
+    box-shadow: 0 3px #666;
     background-color: crimson;
 }
 button:active {
@@ -69,3 +77,4 @@ p#kanye {
     font-family: Combustion;
     text-decoration: underline overline;
 }
+
