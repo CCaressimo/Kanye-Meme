@@ -8,12 +8,21 @@
     font-family: Combustion;
 }
 
-img#kanyeImg {
-    margin: auto;
-    position: fixed;
-    height: 800px;
-    width: 800px;
+div {
+    
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
+
+img {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 .wisdom {
     margin: auto;
     margin-top: 20%;
@@ -72,7 +81,7 @@ p#quote {
 
 p#kanye {
     font-size: 24px;
-    color: rgba(59, 59, 59, 0.835);
+    color: rgba(39, 39, 39, 0.835);
     font-style: italic;
     font-family: Combustion;
     text-decoration: underline overline;
