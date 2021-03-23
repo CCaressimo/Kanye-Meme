@@ -1,3 +1,4 @@
+var API_KEY = config.API_KEY;
 var button = document.getElementById("wisdom");
 
 button.addEventListener("click", (name) => {
@@ -10,7 +11,7 @@ button.addEventListener("click", (name) => {
         document.getElementById("quote").innerHTML = data.quote;
 
         fetch(
-          `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=9a41f07944363a7bbd088bbe8bf52217&tags=kanyememe&format=json&nojsoncallback=1`
+          `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&tags=kanyememe&format=json&nojsoncallback=1`
         )
           .then((res) => res.json())
           .then((data) => addKanye(data))

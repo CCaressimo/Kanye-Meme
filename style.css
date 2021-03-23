@@ -26,9 +26,10 @@ img {
 img#animated {
     height: 50px;
     width: 50px;
-    top: 80%;
-    right: 5%;
+    top: 63%;
+    left: 25%;
     z-index: 1;
+    position: relative;
     animation: bounce 0.8s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.5,0.05,1,.5);
@@ -41,9 +42,10 @@ img#animated {
 }
 
 div.video {
-    top: 56.5%;
+    top: 53%;
     right: 35%;
     z-index: 1;
+    position: relative;
 }
 
 .wisdom {
@@ -71,6 +73,8 @@ button {
     box-shadow: 0 4px #666;
     transition: .3s;
     border-radius: 5px;
+    position:relative;
+    left: 8%;
 }
 
 button:hover {
@@ -93,6 +97,11 @@ h1 {
     font-weight: bold;
     text-decoration: underline;
     color: rgb(31, 31, 31);
+}
+
+div.box {
+    position: relative;
+    padding: 0%;
 }
 
 p#quote {
