@@ -23,29 +23,46 @@ img {
     z-index: -1;
 }
 
-img#animated {
+img.animated#left {
     height: 50px;
     width: 50px;
-    top: 64%;
-    left: 26%;
+    top: 69%;
+    left: 32%;
     z-index: 1;
     position: relative;
-    animation: bounce 1s;
+    animation: bounce .9s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.05,0.05,.05,.05);
+    animation-iteration-count: infinite;
+}
+img.animated#right {
+    height: 50px;
+    width: 50px;
+    top: 69%;
+    right: 66%;
+    z-index: 1;
+    position: relative;
+    animation: bounce .7s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.05,0.05,.05,.05);
     animation-iteration-count: infinite;
 }
 
 @keyframes bounce {
-  from { transform: translate3d(0px, 10px, 0px); }
+  from { transform: translate3d(0px, 8px, 0px); }
   to   { transform: translate3d(0px, 20px, 0px); }
 }
 
 div.video {
-    top: 54%;
-    right: 35.5%;
-    z-index: 1;
+    margin: auto;
+    margin-top: 1%;
     position: relative;
+    text-align: center;
+    width: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 15px;
 }
 
 .wisdom {
@@ -57,7 +74,9 @@ div.video {
     width: 400px;
     font-size: 80%;
     background-color: rgba(34, 34, 34, 0.644);
-    box-shadow: rgba(50, 50, 93, 0.137) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 15px;
 }
 
@@ -69,7 +88,7 @@ button {
     transition: .3s;
     border-radius: 5px;
     position:relative;
-    left: 8%;
+    left: 13%;
 }
 
 button:hover {
@@ -86,13 +105,33 @@ button:active {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-style: italic;
     font-family: Cloister;
     font-weight: bold;
     text-decoration: underline;
     color: rgb(211, 211, 211);
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid black; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .1em; /* Adjust as needed */
+    animation:
+        typing 5s steps(35, end),
+        blink-caret .5s step-end infinite;
+    width: 405px;
 }
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
 
 div.box {
     position: relative;
@@ -103,8 +142,13 @@ p#quote {
     color: rgb(255, 255, 255);
     font-family: Combustion;
     text-decoration: underline overline dotted rgba(42, 42, 42, 0.144);
-    bottom: 15%;
-    position: relative;
+    z-index: 1;
+    transition: .8s;
+}
+
+p#quote:hover {
+    transform: skew(15deg);
+    transition: .8s;
 }
 
 p#kanye {
@@ -113,9 +157,12 @@ p#kanye {
     font-style: italic;
     font-family: Combustion;
     text-decoration: underline overline;
-    bottom: 15%;
-    z-index: 1;
-    position: relative;
+    transition: .8s;
+}
+
+p#kanye:hover {
+    transform:skew(10deg,20deg) ;
+    transition: .8s;
 }
 
 iframe#song {
