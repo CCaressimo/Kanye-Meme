@@ -26,13 +26,13 @@ img {
 img#animated {
     height: 50px;
     width: 50px;
-    top: 63%;
-    left: 25%;
+    top: 64%;
+    left: 26%;
     z-index: 1;
     position: relative;
-    animation: bounce 0.8s;
+    animation: bounce 1s;
     animation-direction: alternate;
-    animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+    animation-timing-function: cubic-bezier(.05,0.05,.05,.05);
     animation-iteration-count: infinite;
 }
 
@@ -42,8 +42,8 @@ img#animated {
 }
 
 div.video {
-    top: 53%;
-    right: 35%;
+    top: 54%;
+    right: 35.5%;
     z-index: 1;
     position: relative;
 }
@@ -56,14 +56,9 @@ div.video {
     height: 400px;
     width: 400px;
     font-size: 80%;
-    background-color: rgba(116, 100, 77, 0.739);
-    border: solid 5px rgba(3, 3, 3, 0.438);
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-
-    border-radius: 5px;
+    background-color: rgba(34, 34, 34, 0.644);
+    box-shadow: rgba(50, 50, 93, 0.137) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 15px;
 }
 
 button {
@@ -96,26 +91,35 @@ h1 {
     font-family: Cloister;
     font-weight: bold;
     text-decoration: underline;
-    color: rgb(31, 31, 31);
+    color: rgb(211, 211, 211);
 }
 
 div.box {
     position: relative;
-    padding: 0%;
 }
 
 p#quote {
     font-size: 30px;
-    color: rgb(24, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: Combustion;
     text-decoration: underline overline dotted rgba(42, 42, 42, 0.144);
+    bottom: 15%;
+    position: relative;
 }
 
 p#kanye {
     font-size: 24px;
-    color: rgba(39, 39, 39, 0.835);
+    color: rgba(212, 212, 212, 0.835);
     font-style: italic;
     font-family: Combustion;
     text-decoration: underline overline;
+    bottom: 15%;
+    z-index: 1;
+    position: relative;
 }
 
+iframe#song {
+    position: fixed;
+    top: 92%;
+    z-index: 1;
+}
