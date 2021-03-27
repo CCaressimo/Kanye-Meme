@@ -1,6 +1,11 @@
 var API_KEY = config.API_KEY
 var button = document.getElementById("wisdom");
 
+function setHalfVolume() {
+  var myAudio = document.getElementById("sound1");
+  myAudio.volume = 0.5; //Changed this to 0.5 or 50% volume since the    function is called Set Half Volume ;)
+}
+
 button.addEventListener("click", (name) => {
   // window.location.reload();
   getQuote();
@@ -11,7 +16,7 @@ function getQuote() {
     .then(data => {
       var showQuote = document.getElementById("quote");
       var kanyeQuote = data["quote"];
-      showQuote.innerHTML = '"' + kanyeQuote + '"';
+      showQuote.innerHTML = 'Kanye West - ' +' "' + kanyeQuote + '"';
     });
     
 }
