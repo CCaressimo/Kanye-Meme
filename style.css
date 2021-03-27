@@ -2,10 +2,12 @@
     src: url(fonts/CloisterBlack.ttf);
     font-family: Cloister;
 }
+
 @font-face {
     src: url(fonts/combustion-brk.combustion-ii-brk.ttf);
     font-family: Combustion;
 }
+
 .wisdom {
     margin: auto;
     position: relative;
@@ -14,6 +16,7 @@
     width: 100%;
     font-size: 80%;
 }
+
 /* title */
 div.title{
     margin: auto;
@@ -22,6 +25,7 @@ div.title{
     width: 380px;
     z-index: 1;
 }
+
 h1 {
     font-size: 40px;
     font-style: italic;
@@ -50,6 +54,7 @@ div.quote {
     margin-bottom: 25%;
     right: 20%;
 }
+
 p#quote {
     margin-bottom: 0%;
     font-size: 30px;
@@ -63,10 +68,12 @@ p#quote {
     width: 500px;
     float: left;
 }
+
 p#quote:hover {
     transform: skew(15deg);
     transition: .8s;
 }
+
 /* button */
 div.button{
     margin: auto;
@@ -76,6 +83,7 @@ div.button{
     position: relative;
     width: 20%;
 }
+
 button {
     font-size: 20px;
     font-family: Cloister;
@@ -86,18 +94,21 @@ button {
     position: relative;
     z-index: 1;
 }
+
 button:hover {
     transition: .3s;
     transform: translateY(-4px);
     box-shadow: 0 3px #666;
     background-color: crimson;
 }
+
 button:active {
     background-color: #3E8E41;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
     transition: .2s;
 }
+
 /* floating head icon */
 
 div.col-sm-6#one{
@@ -135,10 +146,12 @@ img.animated#topLeft {
   from { transform: translate3d(0px, 8px, 0px); }
   to   { transform: translate3d(0px, 20px, 0px); }
 }
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
 }
+
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange; }
@@ -160,6 +173,7 @@ iframe#song {
     top: 25%;
     border-radius: 10px;
 }
+
 iframe#clip {
     position: relative;
     right: 20%;
