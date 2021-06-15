@@ -31,47 +31,19 @@ h1 {
     font-style: italic;
     font-family: Cloister;
     font-weight: bold;
-    text-decoration: underline;
-    color: rgb(211, 211, 211);
-    position: relative;
-    width: 400px;
-    left: .3%;
-    margin: 0 auto;
-    letter-spacing: .1em; 
-    background-color: rgba(29, 29, 29, 0.897);
+    background-color: rgba(0, 0, 0, 0.815);
+    color: rgb(241, 241, 241);
     border-radius: 10px;
-}
-
-div.quote.col-sm-6 {
-    margin-bottom: 0%;
-}
-
-
-div.quote {
-    margin: auto;
-    position: fixed;
-    text-align: center;
-    margin-bottom: 25%;
-    right: 20%;
 }
 
 p#quote {
-    margin-bottom: 0%;
     font-size: 30px;
     color: rgb(255, 255, 255);
     font-family: Combustion;
-    text-decoration: underline overline dotted rgba(42, 42, 42, 0.144);
     z-index: 1;
     transition: .8s;
-    background-color: rgba(39, 39, 39, 0.548);
+    background-color: rgba(27, 27, 27, 0.842);
     border-radius: 10px;
-    width: 500px;
-    float: left;
-}
-
-p#quote:hover {
-    transform: skew(15deg);
-    transition: .8s;
 }
 
 /* button */

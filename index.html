@@ -4,41 +4,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advice from Kanye</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <img id='kanyeImg' src=''>
-
-    <div class="wisdom container-fluid">
-
-        <div class="row">
-            <div class="title col-sm-12">
-                <h1>Words from God</h1>
+    <div class="wisdom">
+        <section className="relative pt-36 lg:pt-48 px-16">
+        
+            <div class="container pt-4 md:pt-12 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+                <div class="mx-auto flex flex-row items-center">
+                    <h1 class="my-4 text-3xl md:text-5xl shadow-inner text-center">
+                    Words from God
+                    </h1>
+                </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6" id="one">
+            
+            <div class="flex text-center pt-8" id="one">
                 <img  id='topLeft' class="animated img" src="images/EBY-watch-Kanye-West-03k-20x.gif">
             </div>
 
-            <div class="quote col-sm-6" id="one">
-                <p id="quote"></p>
+            <div class="flex items-center justify-center">
+                <div class="button col-sm-12"> 
+                    <audio id="sound1" src="sound/kanye-imagod.wav" onloadeddata="setHalfVolume()"></audio>
+                    
+                    <button id="wisdom" type="submit" onclick="document.getElementById('sound1').play();">Great Wisdom</button>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="button col-sm-12"> 
-                <audio id="sound1" src="sound/kanye-imagod.wav" onloadeddata="setHalfVolume()"></audio>
-                
-                <button id="wisdom" type="submit" onclick="document.getElementById('sound1').play();">Great Wisdom</button>
+            <div class="px-8 md:px-16">
+                <div class="quote" id="one">
+                    <p id="quote"></p>
+                </div>
             </div>
-        </div>
-
+        </section>
     </div>
 
+   
     
 
     <div class="footer">
@@ -52,8 +55,11 @@
                 <iframe id="song" src="https://open.spotify.com/embed/track/24bnCCysWnbNRNUT4LpHcP" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </div>
-        
+        </div>
+        </div>
+        </div>
     </div>
+    </section>
 
 </body>
   <script src='config.js'></script>
