@@ -102,12 +102,11 @@ img {
     width: 100%;
     height: 100%;
 }
-img.animated#topLeft {
-    height: 75%;
-    width: 30%;
-    right: 20%;
+img.animated#kanye {
     z-index: 1;
-    position: relative;
+    position: absolute;
+    width: 10%;
+    height: 10%;
     animation: bounce .7s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(.05,0.05,.05,.05);
