@@ -1,63 +1,51 @@
-$(document).ready(() =>{
-    console.log('jQuery is ready');
-})
+var API_KEY = config.API_KEY
+var button = document.getElementById("wisdom");
 
-const $container = $('<div>')
+function setHalfVolume() {
+  var myAudio = document.getElementById("sound1");
+  let audio = myAudio;
 
-const $title = $('<h1>', {
-    text: "God's Response"
-})
-
-$container.append($title)
-$(document.body).append($container)
-
-const $kanyeAdvice = $('<button>', {
-    text: 'Click for Kanye'
-})
-
-$kanyeAdvice.appendTo($container)
-
-$kanyeAdvice.on('click', event =>{
-    getAdvice()
-    .then(Advice => {
-        $('.Advice').remove()
-        console.log(advice);
-        $('<p>', {
-            text: Advice
-        })
-        .addClass('Advice')
-        .hide()
-        .appendTo($container)
-    })
-})
-
-function getAdvice() {
-    return $.ajax({
-        url: 'https://api.kanye.rest',
-        headers: {
-            'Accept' : 'application/json'
-        }
-    })
-    .then(response => {
-        return response.Advice
-    })
-    .catch(err => {
-        return err
-    })
+  let volume = document.querySelector("#volume-control");
+  volume.addEventListener("change", function (e) {
+  audio.volume = e.currentTarget.value / 100;
+}); //Changed this to 0.5 or 50% volume since the    function is called Set Half Volume ;)
 }
 
-function searchAdvice(term) {
-  return $.ajax({
-    url: "https://api.kanye.rest" + term,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      return response.results.map((result) => result.Advice);
-      // console.log(response);
-    })
-    .catch((err) => {
-      return err;
+
+
+button.addEventListener("click", (name) => {
+  // window.location.reload();
+  getQuote();
+  
+function getQuote() {
+  fetch("https://api.kanye.rest")
+    .then((resp) => resp.json())
+    .then(data => {
+      var showQuote = document.getElementById("quote");
+      var kanyeQuote = data["quote"];
+      showQuote.innerHTML = 'Kanye West - ' +' "' + kanyeQuote + '"';
     });
+    
 }
+
+fetch(
+  `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&tags=kanyememe&format=json&nojsoncallback=1`
+)
+  .then((res) => res.json())
+  .then((data) => addKanye(data))
+
+function kanyeArray() {
+  return Math.floor(Math.random() * Math.floor(13));
+}
+
+var addKanye = (data) => {
+  console.log(data);
+  console.log(kanyeArray());
+  var kanyeCode = data.photos.photo[kanyeArray()]
+  var kanyeUrl = `http://live.staticflickr.com/${kanyeCode.server}/${kanyeCode.id}_${kanyeCode.secret}.jpg`;
+
+  var kanyeImg = document.getElementById("kanyeImg");
+  kanyeImg.src = kanyeUrl;
+          };
+});
+

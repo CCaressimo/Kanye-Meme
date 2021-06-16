@@ -1,8 +1,145 @@
-h1 {
-    
+@font-face {
+    src: url(fonts/CloisterBlack.ttf);
+    font-family: Cloister;
 }
 
-p {
+@font-face {
+    src: url(fonts/combustion-brk.combustion-ii-brk.ttf);
+    font-family: Combustion;
+}
 
+.wisdom {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 80%;
+}
 
+/* title */
+div.title{
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 380px;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 40px;
+    font-style: italic;
+    font-family: Cloister;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.815);
+    color: rgb(241, 241, 241);
+    border-radius: 10px;
+}
+
+p#quote {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-family: Combustion;
+    z-index: 1;
+    transition: .8s;
+    background-color: rgba(27, 27, 27, 0.842);
+    border-radius: 10px;
+}
+
+/* button */
+div.button{
+    margin: auto;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    top: 45%;
+    position: relative;
+    width: 20%;
+}
+
+button {
+    font-size: 20px;
+    font-family: Cloister;
+    background-color: coral;
+    box-shadow: 0 4px #666;
+    transition: .3s;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+button:hover {
+    transition: .3s;
+    transform: translateY(-4px);
+    box-shadow: 0 3px #666;
+    background-color: crimson;
+}
+
+button:active {
+    background-color: #3E8E41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    transition: .2s;
+}
+
+/* floating head icon */
+
+div.col-sm-6#one{
+    height: 300px;
+    width: 300px;    
+}
+
+div.img{
+    position: relative;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    right: 33%;
+}
+img {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+img.animated#kanye {
+    z-index: 1;
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    animation: bounce .7s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.05,0.05,.05,.05);
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from { transform: translate3d(0px, 8px, 0px); }
+  to   { transform: translate3d(0px, 20px, 0px); }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+iframe#song {
+    border-radius: 10px;
+}
+
+iframe#clip {
+    border-radius: 10px;
 }

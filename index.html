@@ -3,20 +3,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Advice from Kanye</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-   <div class="input">
-      <h1>Tv Shows</h1>
-        <input type="text" placeholder="Enter your show" class="input_text">
-        <button type="submit" class="submit">submit</button>
-      </div>
+    <img id='kanyeImg' src=''>
+    <div class="wisdom">
+        <section className="relative pt-36 lg:pt-48 px-16">
+        
+            <div class="container pt-4 md:pt-12 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+                <div class="mx-auto flex flex-row items-center">
+                    <h1 class="my-4 text-3xl md:text-5xl shadow-inner text-center">
+                    Words from God
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center py-12" id="one">
+                <img id="kanye" class="animated img" src="images/EBY-watch-Kanye-West-03k-20x.gif">
+            </div>
+
+            <div class="flex items-center justify-center">
+                <div class="button col-sm-12"> 
+                    <audio id="sound1" src="sound/kanye-imagod.wav" onloadeddata="setHalfVolume()"></audio>
+                    
+                    <button id="wisdom" type="submit" onclick="document.getElementById('sound1').play();">Great Wisdom</button>
+                </div>
+            </div>
+
+            <div class="px-8 md:px-16">
+                <div class="quote" id="one">
+                    <p id="quote"></p>
+                </div>
+            </div>
+        
+            <div class="footer">
+
+                <div>
+                    <div class="flex items-center justify-center pb-2 md:pb-6">
+                        <iframe id="clip" class="" src="https://www.youtube.com/embed/39pe-zWuiWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                
+                    <div class="flex items-center justify-center pb-2 md:pb-6">
+                        <iframe id="song" src="https://open.spotify.com/embed/track/24bnCCysWnbNRNUT4LpHcP" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
-<div id="container">
-    <h1 id="title">  </h1>
-    <p id="description"></p>
-    <img src="" alt="" id="picture">
-</div>
 </body>
-<script src="practice.js"></script>
+  <script src='config.js'></script>
+  <script src='script.js'></script>
 </html>
