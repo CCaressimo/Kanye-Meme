@@ -15,3 +15,7 @@
 ## Instructions:
 
 * Click on the center button to recieve Great Wisdom and a fantastic photo of the Great Kanye West.
+* Click on the Youtube video to listen to an important conversation between Mr. West and Joe Rogan.
+* Follow the Spotify button to Kanye's Spotify.
+
+Enjoy you new found great wisdom!
