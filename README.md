@@ -11,3 +11,7 @@
 * git clone git@github.com:CCaressimo/Kanye-Meme.git
 * cd Kanye-Meme/
 * open index.html with live server
+
+## Instructions:
+
+* Click on the center button to recieve Great Wisdom and a fantastic photo of the Great Kanye West.
